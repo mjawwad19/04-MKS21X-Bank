@@ -7,14 +7,16 @@ public class Driver {
     System.out.println(a);
 
     //if( a.withdraw(1000) ){
-    if( a.withdraw(9000)) {
+    //if( a.withdraw(9000)) {
+    if (a.withdraw(-2)) {
       System.out.println("Withdrawal success!");
     }
     else {System.out.println("Withdrawal failure");}
 
     System.out.println("The current balance of this account is " + a.getBalance());
 
-    if( a.deposit(7000) ){
+    //if( a.deposit(7000) ){
+    if (a.withdraw(-2)) {
              System.out.println("Deposit success!");
         }
         else {System.out.println("Deposit failure");}
