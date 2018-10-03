@@ -3,10 +3,10 @@ public class BankAccount {
   public int accountID;
   public String password;
   /*Sole constructor requires all field's values*/
-  public BankAccount ( int accountID, double balance, String password) {
-    balance = balance;
-    accountID = accountID;
-    password = password;
+  public BankAccount ( int startAccountID, double startBalance, String startPassword) {
+    balance = startBalance;
+    accountID = startAccountID;
+    password = startPassword;
   }
   /*Return a String to be used to display the account data.
   "ACCOUNT\tBALANCE" */
