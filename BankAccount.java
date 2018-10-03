@@ -5,7 +5,7 @@ public class BankAccount {
   /*Sole constructor requires all field's values*/
   public BankAccount ( int accountID, double balance, String password) {
     balance = balance;
-    accountId = accountID;
+    accountID = accountID;
     password = password;
   }
   /*Return a String to be used to display the account data.
