@@ -29,7 +29,7 @@ public class Driver {
     System.out.println("The account ID and current balance of account a is");
     System.out.println(a);
 
-    if (a.transferTo(b, 4000.0, "pass")) {
+    if (a.transferTo(b, /*4000.0*/ -100, "pass")) {
       System.out.println("Withdrawed and deposited.");
     }
     else {System.out.println("Could not withdraw and deposit");}
