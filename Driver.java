@@ -1,6 +1,6 @@
 public class Driver {
   public static void main(String[]args){
-    BankAccount a = new BankAccount(5429, 5000, "pass");
+    BankAccount a = new BankAccount(5000.0, 5429, "pass");
 
     System.out.println("The account number is " + a.getAccountID());
     System.out.println("The current balance of this account is " + a.getBalance());
