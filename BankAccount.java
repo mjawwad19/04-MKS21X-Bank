@@ -50,9 +50,9 @@ public class BankAccount {
     else {return false;}
   }
   /*This private method will allow internal methods to check the password easily*/
-private boolean authenticate(String password) {
-  return password == this.password;
-}
+  private boolean authenticate(String password) {
+     return password == this.password;
+  }
 
 /*Transfer money from this BankAccount to the other only when the password matches, and the withdrawal succeeds.
  *@param other which BankAccount to GIVE the money to
@@ -60,12 +60,12 @@ private boolean authenticate(String password) {
  *@param password to be checked against the source account, incorrect password will make this operation fail.
  *@return true if successful, false otherwise.
  */
-public boolean transferTo(BankAccount other, double amount, String password) {
-  if (authenticate(password)) {
-    withdraw(amount);
-    other.deposit(amount);
-    return true;
-  }
-  return false;
-}
+  public boolean transferTo(BankAccount other, double amount, String password) {
+    if (authenticate(password)) {
+      withdraw(amount);
+      other.deposit(amount);
+      return true;
+    }
+    else {return false;}
+ }
 }
