@@ -3,7 +3,7 @@ public class BankAccount {
   public int accountID;
   public String password;
   /*Sole constructor requires all field's values*/
-  public BankAccount ( int startAccountID, double startBalance, String startPassword) {
+  public BankAccount (double startBalance, int startAccountID, String startPassword) {
     balance = startBalance;
     accountID = startAccountID;
     password = startPassword;
@@ -49,4 +49,23 @@ public class BankAccount {
     }
     else {return false;}
   }
+  /*This private method will allow internal methods to check the password easily*/
+private boolean authenticate(String password) {
+  return password == this.password;
+}
+
+/*Transfer money from this BankAccount to the other only when the password matches, and the withdrawal succeeds.
+ *@param other which BankAccount to GIVE the money to
+ *@param amount how much money to transfer, negative amounts will make this operation fail.
+ *@param password to be checked against the source account, incorrect password will make this operation fail.
+ *@return true if successful, false otherwise.
+ */
+public boolean transferTo(BankAccount other, double amount, String password) {
+  if (authenticate(password)) {
+    withdraw(amount);
+    other.deposit(amount);
+    return true;
+  }
+  return false;
+}
 }
